@@ -1,0 +1,104 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: 'Varela Round';
+}
+
+header {
+    text-align: center;
+    padding: 20px;
+}
+
+.container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+.container .section:nth-child(1) {
+    background-color: rgba(213, 152, 152,0.3);
+    background-color: rgba(193, 69, 67,0.3);
+    background-color: rgba(229, 209, 152,0.2)
+    
+
+}
+.container .section:nth-child(2) {
+    background-color: rgba(193, 69, 67,0.3);
+}
+.container .section:nth-child(3) {
+    background-color: rgba(229, 209, 152,0.3)
+}
+
+.section {
+    border: 1px solid black;
+    position: relative;
+    margin: 10px;
+    width: calc(33.33% - 20px);
+    box-sizing: border-box;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.chicken {
+    background-color: #D59898;
+    color: black;
+} 
+
+.beef {
+    background-color: #C14543;
+    color: white;
+}
+
+.sushi {
+    background-color: #E5D198;
+    color: black;
+}
+
+.section h2 {
+    position: absolute;
+    top: 0;
+    right: 0;
+    width: 100px;
+    padding: 5px 10px;
+    margin: 0;
+    font-size: 125%;
+    text-align: center;
+    border: 1px solid black;
+    border-top: 0;
+    border-right: 0;
+}
+
+.section p {
+    margin-top: 20px;
+    padding: 20px;
+}
+
+.section h2 {
+    margin-bottom: 10px;
+}
+
+@media screen and (min-width: 768px) and (max-width: 991px) {
+    .section {
+        width: calc(50% - 20px);
+    }
+    
+    .section:nth-child(3) {
+        width: calc(100% - 20px);
+        clear: both;
+    }
+}
+
+@media screen and (max-width: 767px) {
+    .section {
+        width: calc(100% - 20px);
+        clear: both;
+    }
+    
+    .section:nth-child(n) {
+        width: calc(100% - 20px);
+    }
+}
